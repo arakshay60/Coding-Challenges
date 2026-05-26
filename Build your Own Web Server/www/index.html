@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Java Web Server</title>
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #1a252f;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: #1abc9c;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1abc9c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: #fff;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #bdc3c7;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #1abc9c;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #16a085;
+        }
+
+        /* Container & Features Section */
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 4px solid #1abc9c;
+        }
+
+        .card h3 {
+            margin-bottom: 0.75rem;
+            color: #2c3e50;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #7f8c8d;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">CustomServer/1.0</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Metrics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hello from your Custom Java Web Server!</h1>
+        <p>This static asset was parsed from disk and successfully transmitted via raw TCP sockets.</p>
+        <a href="#" class="btn">View Server Metrics</a>
+    </section>
+
+    <main class="container">
+        <div class="features">
+            <div class="card">
+                <h3>Low-Level I/O</h3>
+                <p>Data is read directly using byte stream protocols and routed straight to network buffers.</p>
+            </div>
+            <div class="card">
+                <h3>HTTP/1.1 Standard</h3>
+                <p>Correctly parses request headers, extracts Uniform Resource Identifiers (URIs), and appends
+                    appropriate boundary parameters.</p>
+            </div>
+            <div class="card">
+                <h3>Resource Isolated</h3>
+                <p>Loads configuration components or text blobs efficiently while tracking resource usage thresholds.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Systems Engineering Sandbox. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
